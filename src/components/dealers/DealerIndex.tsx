@@ -67,7 +67,7 @@ const DealerIndex = () => {
     const deleteMutation = useMutation({
         mutationFn: deleteDealerById,
         onSuccess: () => {
-            queryClient.invalidateQueries(['dealers']);
+            queryClient.invalidateQueries();
             setDeleteDialog(false);
         }
     });
